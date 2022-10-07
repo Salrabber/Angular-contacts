@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 
 @Component({
@@ -7,8 +8,9 @@ import { User } from 'src/app/models/user';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent {
+ 
 
-  // constructor() { }
+  constructor(private router: Router) {}
 
   // ngOnInit(): void {
   // }

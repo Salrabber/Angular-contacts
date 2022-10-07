@@ -16,8 +16,6 @@ export class usersService{
             params: new HttpParams({
                 fromObject: {limit: 5}
             })
-        }).pipe(
-            delay(500)
-        )
+        })
     }
 }   
