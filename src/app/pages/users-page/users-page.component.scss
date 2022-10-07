@@ -1,0 +1,37 @@
+
+.users__list-item{
+    margin-top: 10px;
+}
+
+.main{
+    margin-top: 50px;
+}
+
+.container{
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.users{
+    color: #FFFF;
+    .users__title{
+        color: #72B63B;
+    }
+}
+
+.loading{
+    color: black;
+}
+
+.sidebar{
+    background-color: #061125;
+}
+
+
+
+.main__inner{
+    display: flex;
+    justify-content: space-around;
+    // justify-content: space-between;
+}

@@ -17,7 +17,7 @@ export class usersService{
                 fromObject: {limit: 5}
             })
         }).pipe(
-            delay(2000)
+            delay(500)
         )
     }
 }   

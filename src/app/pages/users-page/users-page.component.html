@@ -1,1 +1,24 @@
-<p>users-page works!</p>
+<div class="main__inner">
+    <div class="sidebar">
+      <div class="sidebar__content">
+        <p class="sidebar__text">Sort:</p>
+        <button class="sidebar__btn">by city</button>
+        <button class="sidebar__btn">by company</button>
+      </div>
+    </div>
+    <!-- <app-profile></app-profile> -->
+    <div class="users">
+      <div class="users__content">
+        <p class="users__title">List of Users</p>
+        <p *ngIf="loading" class="loading">Loading...</p>
+        <ul class="users__list">
+          <li class="users__list-item">
+            <app-user
+            *ngFor="let user of users"
+            [user] = user
+            ></app-user>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

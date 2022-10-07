@@ -8,21 +8,7 @@ import { Observable } from 'redux';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent{
   title = 'Siologoc';
-  users: User[] = []
-  loading: boolean = false
-
-  constructor(private userService: usersService){
-
-  }
-
-  ngOnInit(): void {
-    this.loading = true
-    this.userService.getAll().subscribe(users => {
-      this.users = users
-      console.log(users)
-      this.loading = false
-    })
-  }
+  
 }
