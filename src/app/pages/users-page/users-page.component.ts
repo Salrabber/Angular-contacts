@@ -9,18 +9,19 @@ import { usersService } from 'src/app/services/users.service';
 })
 export class UsersPageComponent implements OnInit {
 
-  users: User[] 
+  // users: User[] 
   loading: boolean = false
+  
 
-  constructor(private userService: usersService){
+  constructor(public userService: usersService){
 
   }
 
   ngOnInit(): void {
     this.loading = true
     this.userService.getAll().subscribe(users => {
-      this.users = users
-      console.log(users)
+      // this.users = users
+      // console.log(users)
       this.loading = false
     })
   }

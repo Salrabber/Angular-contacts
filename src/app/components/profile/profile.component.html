@@ -1,52 +1,51 @@
-<div class="profile">
-    <div class="profile__inner">
-        <div class="header">
-            <p class="header__text">User profile</p>
-            <button class="edit__btn">
-                Edit {{id}}
-            </button>
-            <a href="" routerLink="/" class="back__link">Back</a>
+<div class="edit-profile">
+    <div class="container">
+        <div class="main__inner">
+            <div class="side">
+                <a href="" routerLink="/" class="back__link">Back</a>
+            </div>
+            <!-- <app-profile></app-profile> -->
+            <div class="profile">
+                <div class="header">
+                    <p class="header__text">User profile</p>
+                    <button (click)="on()" *ngIf="edit==false" class="edit__btn">
+                        Edit {{id + 1}}
+                    </button>
+                </div>
+                <!-- <app-form *ngFor="let field of fields" [field]="field"
+                                [ngClass]="{'disabled': edit==false} "></app-form> -->
+                <form class="profile__form" [formGroup]="form" (ngSubmit)="sendUser()">
+                    <div class="info">
+
+
+                        <div class="info__item">
+                            <p class="info__text">Name</p>
+                            <input
+                                [ngClass]="{'disabled': edit==false, 'invalid-input': error.Name.errors?.required && edit}"
+                                type="text" placeholder="{{userService.users[id].name}}" class="info__input"
+                                formControlName="Name">
+                        </div>
+                        <div class="info__item">
+                            <p class="info__text">City</p>
+                            <input
+                                [ngClass]="{'disabled': edit==false, 'invalid-input': error.City.errors?.required && edit}"
+                                type="text" placeholder="{{userService.users[id].address.city}}" class="info__input"
+                                formControlName="City">
+                        </div>
+                        <div class="info__item">
+                            <p class="info__text">Company</p>
+                            <input
+                                [ngClass]="{'disabled': edit==false, 'invalid-input': error.Company.errors?.required && edit}"
+                                type="text" placeholder="{{userService.users[id].company.name}}" class="info__input"
+                                formControlName="Company">
+                        </div>
+                    </div>
+                    <button (click)="sendUser()" [ngClass]="{'disabled': edit==false}" type="submit" class="send__btn">
+                        Send
+                    </button>
+                </form>
+            </div>
         </div>
-        <div class="info">
-            <div class="info__item">
-                <p class="info__text">Name</p>
-                <input type="text" class="info__input">
-            </div>
-            <div class="info__item">
-                <p class="info__text">User name</p>
-                <input type="text" class="info__input">
-            </div>
-            <div class="info__item">
-                <p class="info__text">E-mail</p>
-                <input type="text" class="info__input">
-            </div>
-            <div class="info__item">
-                <p class="info__text">Street</p>
-                <input type="text" class="info__input">
-            </div>
-            <div class="info__item">
-                <p class="info__text">City</p>
-                <input type="text" class="info__input">
-            </div>
-            <div class="info__item">
-                <p class="info__text">Zip code</p>
-                <input type="text" class="info__input">
-            </div>
-            <div class="info__item">
-                <p class="info__text">Phone</p>
-                <input type="text" class="info__input">
-            </div>
-            <div class="info__item">
-                <p class="info__text">Website</p>
-                <input type="text" class="info__input">
-            </div>
-            <div class="comment__item">
-                <p class="info__text">Comment</p>
-                <input type="text" class="comment__input">
-            </div>
-        </div>
-        <button class="send__btn">
-            Send
-        </button>
+
     </div>
 </div>

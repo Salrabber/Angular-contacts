@@ -8,6 +8,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { UsersPageComponent } from './pages/users-page/users-page.component';
+import { FormComponent } from './components/form/form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -15,12 +17,16 @@ import { UsersPageComponent } from './pages/users-page/users-page.component';
     UserComponent,
     ProfileComponent,
     UserProfileComponent,
-    UsersPageComponent
+    UsersPageComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

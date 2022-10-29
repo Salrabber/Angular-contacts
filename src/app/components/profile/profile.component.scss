@@ -1,3 +1,116 @@
-text{
-    color: black;
-} 
+$white: #ffffff;
+$green: #72b63b;
+
+.edit-profile {
+  margin-top: 50px;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main__inner {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  .side {
+    padding: 15px 25px 0;
+    max-width: 150px;
+    background-color: #061125;
+    .back__link {
+      background: $green;
+      border-radius: 5px;
+      padding: 5px 18px;
+      color: $white;
+      text-align: center;
+      font-size: 14px;
+      line-height: 14px;
+      width: 105px;
+      margin-top: 10px;
+    }
+  }
+  .profile {
+    // border: 1px solid black;
+    padding: 20px 60px 0 30px;
+    flex-basis: 550px;
+    position: relative;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      align-items: center;
+      &__text {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 16px;
+        color: $green;
+        text-align: center;
+        padding-top: 15px;
+      }
+      .edit__btn {
+        background: $green;
+        border-radius: 5px;
+        padding: 5px 18px;
+        color: $white;
+        text-align: center;
+        font-size: 14px;
+        line-height: 14px;
+        width: 105px;
+        margin-top: 10px;
+        border: none;
+      }
+    }
+    .info {
+      border: 1px solid #aeaeae;
+      border-radius: 8px;
+      margin-top: 10px;
+      padding: 20px 12px;
+      &__item {
+        margin-top: 10px;
+      }
+      &__text {
+        margin-bottom: 7px;
+      }
+      .info__input {
+        width: 211px;
+        height: 25px;
+        background: #ffffff;
+        border: 1px solid #d8d8d8;
+        border-radius: 5px;
+      }
+    }
+    .send__btn {
+      background: $green;
+      border-radius: 5px;
+      padding: 5px 18px;
+      color: $white;
+      text-align: center;
+      font-size: 14px;
+      line-height: 14px;
+      width: 105px;
+      margin-top: 10px;
+      border: none;
+      position: absolute;
+      right: 60px;
+    }
+  }
+}
+
+.loading {
+  color: black;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.invalid-input {
+  border: 1px solid #d91313;
+}
